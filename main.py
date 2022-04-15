@@ -59,8 +59,9 @@ def main():
 	dp.add_error_handler(error_handler)
 
 	# Start the webhook
-	updater.start_webhook(listen="0.0.0.0", port=int(PORT), url_path=TELEGRAM_BOT_TOKEN,
-		webhook_url=TELEGRAM_BOT_WEBHOOK + TELEGRAM_BOT_TOKEN, drop_pending_updates=True, allowed_updates=["message"])
+	#updater.start_webhook(listen="0.0.0.0", port=int(PORT), url_path=TELEGRAM_BOT_TOKEN,
+	#	webhook_url=TELEGRAM_BOT_WEBHOOK + TELEGRAM_BOT_TOKEN, drop_pending_updates=True, allowed_updates=["message"])
+	updater.start_polling()
 	updater.idle()
 
 ## Bot handlers
